@@ -1,0 +1,43 @@
+.form,
+.greetings {
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+    display: block;
+    animation: animation 2s linear;
+}
+
+.inputName {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+}
+
+.inputName::placeholder {
+    color: #fff;
+}
+
+.inputName:focus-visible {
+    border-bottom: 1px solid rgb(50, 179, 104);
+}
+
+@media(max-width:620px) {
+    .form,
+    .greetings {
+        font-size: 16px;
+    }
+}
+
+@keyframes animation {
+    0% {
+        /* color: rgba(0, 0, 0, 1); */
+        color: rgba(255, 255, 255, 0.1);
+        opacity: 0;
+    }
+    100% {
+        color: rgba(255, 255, 255, 1);
+        opacity: 1;
+    }
+}

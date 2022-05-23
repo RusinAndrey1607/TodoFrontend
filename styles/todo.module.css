@@ -1,0 +1,87 @@
+.todoWrapper {
+    transition: all, 0.35s;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 12px;
+    max-width: 30vw;
+    min-width: 300px;
+    max-height: 30vh;
+    min-height: max-content;
+    overflow-y: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    border-left: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 20px 15px 15px 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all, 0.35s;
+    animation: animation 3s linear;
+}
+
+.todoInput {
+    width: 100%;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.todoInput::placeholder {
+    color: #fff;
+}
+
+.todoInput:focus-visible {
+    outline: none;
+    border-bottom: 1px solid rgb(50, 179, 104);
+}
+
+.todoList__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 0;
+    margin-bottom: 3px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.todoList__item span {
+    padding: 0 5px;
+    font-size: 0.9rem;
+    font-weight: 200;
+    display: inline-block;
+}
+
+.delBtn {
+    opacity: 0.7;
+    margin-left: auto;
+}
+
+.done {
+    color: rgb(50, 179, 104);
+    border-bottom: 1px solid rgb(50, 179, 104);
+    transition: all, 0.35s;
+}
+
+.doneBtn {
+    opacity: 0.6;
+    transition: all, 0.35s;
+}
+
+.done .doneBtn {
+    opacity: 1;
+}
+
+@keyframes animation {
+    0% {
+        /* color: rgba(0, 0, 0, 1); */
+        color: rgba(255, 255, 255, 0.1);
+        opacity: 0;
+    }
+    100% {
+        color: rgba(255, 255, 255, 1);
+        opacity: 1;
+    }
+}

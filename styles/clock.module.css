@@ -1,0 +1,46 @@
+.clock {
+    position: relative;
+    z-index: 2;
+    font-weight: 400;
+    font-size: 90px;
+    animation: animation 3s linear;
+}
+
+.dayMonth {
+    position: relative;
+    z-index: 2;
+    font-weight: 400;
+    text-align: center;
+    font-size: 32px;
+    animation: animation 3s linear;
+}
+
+@media(max-width:620px) {
+    .clock {
+        font-size: 70px;
+    }
+    .dayMonth {
+        font-size: 28px;
+    }
+}
+
+@media(max-width:420px) {
+    .clock {
+        font-size: 60px;
+    }
+    .dayMonth {
+        font-size: 26px;
+    }
+}
+
+@keyframes animation {
+    0% {
+        /* color: rgba(0, 0, 0, 1); */
+        color: rgba(255, 255, 255, 0.1);
+        opacity: 0;
+    }
+    100% {
+        color: rgba(255, 255, 255, 1);
+        opacity: 1;
+    }
+}

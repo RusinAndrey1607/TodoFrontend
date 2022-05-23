@@ -1,0 +1,155 @@
+/* reset */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+ul,
+ol {
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+input {
+    transition: all, 0.3s;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+
+/* полоса прокрутки (скроллбар) */
+
+*::-webkit-scrollbar {
+    width: 3px;
+    /* ширина для вертикального скролла */
+    height: 3px;
+    /* высота для горизонтального скролла */
+    background-color: transparent;
+}
+
+
+/* ползунок скроллбара */
+
+*::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 16px;
+}
+
+*::-webkit-scrollbar-button:vertical:start:decrement {
+    display: none;
+}
+
+*::-webkit-scrollbar-button:vertical:end:increment {
+    display: none;
+}
+
+
+/* reset end */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.bgImage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all, 3s;
+    animation: bgAnimation 3s linear;
+}
+
+@keyframes bgAnimation {
+    0% {
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 1);
+    }
+    100% {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
